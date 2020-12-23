@@ -1,5 +1,7 @@
 package standard;
 
+import java.util.Arrays;
+
 public class PrintArray {
     public static void print(int[] array){
         String str = "[ ";
@@ -8,6 +10,18 @@ public class PrintArray {
                 str += elem + " ";
             }else{
                 str += elem + ", ";
+            }
+        }
+        str += "]";
+        System.out.println(str);
+    }
+    public static void print(int[] array, int from, int to){
+        String str = "[ ";
+        for (int i = from; i < to; i++) {
+            if (i == to - 1) {
+                str += array[i] + " ";
+            }else{
+                str += array[i] + ", ";
             }
         }
         str += "]";

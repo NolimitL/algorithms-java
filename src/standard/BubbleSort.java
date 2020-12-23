@@ -8,10 +8,14 @@ public class BubbleSort {
         * */
         // O(n*n)
         int[] array = new int[]{44,64,23,53,87,55,34,24,43,28,68,90,75,654,3468,96,432,529,27};
-        boolean isSorted = false;
-        int iter = 0;
-        TimeCounter.start();
         PrintArray.print(array);
+        TimeCounter.start();
+        bubbleSort(array);
+        TimeCounter.finish();
+        PrintArray.print(array);
+    }
+    public static void bubbleSort(int[] array){
+        boolean isSorted = false;
         while (!isSorted){
             isSorted = true;
             for (int i = 1; i < array.length; i++) {
@@ -23,12 +27,6 @@ public class BubbleSort {
                     isSorted = false;
                 }
             }
-            PrintArray.print(array);
-            iter++;
         }
-        TimeCounter.finish();
-        System.out.println("Min value: " + array[0]);
-        System.out.println("Min index: 0");
-        System.out.println("Iteration: " + iter);
     }
 }
