@@ -1,7 +1,7 @@
 package standard;
 
 public class PrintArray {
-    static void print(int[] array){
+    public static void print(int[] array){
         String str = "[ ";
         for (int elem: array) {
             if (elem == array[array.length - 1]){

@@ -1,9 +1,12 @@
 package standard;
 
-import java.util.Date;
-
-public class BubbleLR {
+public class BubbleSortReverse {
     public static void main(String[] args) {
+        /*
+        * This algorithm works like Bubble, but it goes reverse too - from right to left and
+        * looks for biggest element.
+        * */
+        // O( n*(n/2) )
         int[] array = new int[]{44,64,23,53,87,55,34,24,43,28,68,90,75,654,3468,96,432,529,27};
         boolean isSorted = false;
         PrintArray.print(array);

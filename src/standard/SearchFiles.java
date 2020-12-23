@@ -15,6 +15,7 @@ public class SearchFiles {
     /*
     * It's algorithm to search all files in corresponding folder with a recursion.
     * */
+    // O(n*n)
     private static void searchFiles(File rootFile, List<File> fileList){
         if (rootFile.isDirectory()) {
             System.out.println("Searching at:" + rootFile.getAbsolutePath());

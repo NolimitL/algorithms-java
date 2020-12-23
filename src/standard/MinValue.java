@@ -6,6 +6,7 @@ public class MinValue {
         * Standard sort algorithm to search a min value from array
         * it goes through each element of the array and compares each element with already found min element
         * */
+        // O(n)
         int[] array = new int[]{44,64,23,53,87,9,34,523,12,42,21,97,45,34,11,432};
         int minValue = array[0];
         int minIndex = 0;

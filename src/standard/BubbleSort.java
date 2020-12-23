@@ -6,6 +6,7 @@ public class BubbleSort {
         * Bubble algorithm. It goes through the array and compares both nearby elements with each other.
         * If left element is bigger than right element so rearrange them.
         * */
+        // O(n*n)
         int[] array = new int[]{44,64,23,53,87,55,34,24,43,28,68,90,75,654,3468,96,432,529,27};
         boolean isSorted = false;
         int iter = 0;
