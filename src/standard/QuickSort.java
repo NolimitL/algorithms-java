@@ -3,7 +3,8 @@ package standard;
 public class QuickSort {
     public static void main(String[] args) {
         /*
-        *
+        * One element is taken and defined as a comparator. Then each array element is compared with a comparator and
+        * if it's bigger then we looking for element on left side that smaller then comparator and change them.
         * */
         // O(n*log(n)) ~ O(n*n)
         int[] array = new RandomArray().getArray(100);
@@ -28,7 +29,6 @@ public class QuickSort {
         int comparator = array[start + (end - start)/2];
 //        int comparator = array[start];
         while (leftStep <= rightStep){
-
             while (array[leftStep] < comparator) {
                 leftStep++;
             }

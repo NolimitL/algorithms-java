@@ -1,16 +1,22 @@
 package standard;
 
-import java.util.Arrays;
-
 public class MergeSort {
     public static void main(String[] args) {
-        int[] array = RandomArray.getArray(100_000);
-//        PrintArray.print(array);
-//        int[] array = new int[]{14, 12, 6, 8, 22, 10, 3};
+        /*
+        * "Divide and conquer"
+        * This algorithm goes through all array and divide it to many small parts.
+        * Usually there're small array only with one element. Then each array is merged with the next array to another
+        * array that is doubly bigger than previous. The elements in arrays are compared during the merge.
+        * */
+        // O(n*log(n))
+//        int[] array = RandomArray.getArray(100_000);
+        int[] array = new int[]{12,5,29,94,20,84,22,15,7,51};
+        System.out.println("Initial array:");
+        PrintArray.print(array);
         TimeCounter.start();
         sort(array, 0, array.length - 1);
         TimeCounter.finish();
-//        PrintArray.print(array);
+        PrintArray.print(array);
     }
 
     public static void sort(int[] array, int start, int finish) {
@@ -21,7 +27,6 @@ public class MergeSort {
             merge(array, start, middlePoint, finish);
         }
     }
-
     private static void merge(int[] array, int start, int middle, int finish) {
         int[] leftArr = new int[middle - start + 1];
         int[] rightArr = new int[finish - middle];
